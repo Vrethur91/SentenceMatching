@@ -2,8 +2,8 @@ package org.nlp.match.TokenFilter;
 
 import java.util.ArrayList;
 import java.util.TreeMap;
-import org.nlp.match.Sentenizer.Sentence;
-import org.nlp.match.Sentenizer.Token;
+import org.nlp.match.Sentenizer.Utility.Sentence;
+import org.nlp.match.Sentenizer.Utility.Token;
 
 /**
  * Interface for token filter classes

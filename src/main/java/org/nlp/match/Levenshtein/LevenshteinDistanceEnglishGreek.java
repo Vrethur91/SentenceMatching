@@ -29,9 +29,6 @@ public class LevenshteinDistanceEnglishGreek extends LevenshteinDistance {
             case 'c': 
                 match = lowerCaseC(i0, i1);
                 break;
-            case 'C': 
-                match = upperCaseC(i0, i1);
-                break;
             case 'e': 
                 match = lowerCaseE(i0, i1);
                 break;
@@ -43,9 +40,6 @@ public class LevenshteinDistanceEnglishGreek extends LevenshteinDistance {
                 break;
             case 'k': 
                 match = lowerCaseK(i0, i1);
-                break;
-            case 'K': 
-                match = upperCaseK(i0, i1);
                 break;
             case 'm':
                 match = lowerCaseM(i0, i1);
@@ -81,14 +75,6 @@ public class LevenshteinDistanceEnglishGreek extends LevenshteinDistance {
             return 0;
         }
 
-        return -1;
-    }
-    
-    private int upperCaseC(int i0, int i1){
-        if (s1.charAt(i1) == 'K') {     //C - K
-            return 0;
-        }
-        
         return -1;
     }
     
@@ -148,14 +134,6 @@ public class LevenshteinDistanceEnglishGreek extends LevenshteinDistance {
     
     private int lowerCaseK(int i0, int i1) {
         if (s1.charAt(i1) == 'c') {     //k - c
-            return 0;
-        } 
-        
-        return -1;
-    }
-    
-    private int upperCaseK(int i0, int i1){
-        if (s1.charAt(i1) == 'C') {     //K - C
             return 0;
         } 
         

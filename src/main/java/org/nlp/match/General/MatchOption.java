@@ -1,5 +1,11 @@
-package org.nlp.match.Main;
+package org.nlp.match.General;
 
+import org.nlp.match.Tools.Tweaker;
+import org.nlp.match.TokenMapper.Utility.TokenPair;
+import org.nlp.match.Sentenizer.Utility.Sentence;
+import org.nlp.match.Sentenizer.Utility.Token;
+import org.nlp.match.SentenceMapper.DivideAndConquer.DivideAndConquerSentenceMapper;
+import org.nlp.match.SentenceMapper.Utility.Allocation;
 import java.util.ArrayList;
 import java.util.Map.Entry;
 import java.util.TreeMap;
@@ -7,7 +13,6 @@ import org.apache.commons.math3.stat.regression.SimpleRegression;
 import org.nlp.match.SentenceMapper.*;
 import org.nlp.match.Sentenizer.*;
 import org.nlp.match.TokenMapper.*;
-import org.nlp.match.Utility.*;
 import org.nlp.match.TokenFilter.*;
 
 /**
@@ -177,7 +182,7 @@ public class MatchOption {
      */
     public void mapSentencesDC(DataHolder holder, int split, boolean swap){
         System.out.println("> Map Sentences ");
-        DCSentenceMapper sentenceMapper = new DCSentenceMapper();
+        DivideAndConquerSentenceMapper sentenceMapper = new DivideAndConquerSentenceMapper();
         TreeMap<Integer, Allocation> sentenceMap = sentenceMapper.divideAndConquer(holder, split, false);
         if(swap){
             TreeMap<Integer, Allocation> sentenceMapSwap = sentenceMapper.divideAndConquer(holder, split, true);

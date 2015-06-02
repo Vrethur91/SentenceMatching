@@ -1,5 +1,7 @@
 package org.nlp.match.Sentenizer;
 
+import org.nlp.match.Sentenizer.Utility.Sentence;
+import org.nlp.match.Sentenizer.Utility.Token;
 import com.ibm.icu.text.Transliterator;
 import java.io.BufferedReader;
 import java.io.FileInputStream;

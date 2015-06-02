@@ -31,7 +31,9 @@ public class LevenshteinDistance {
     }
     
     public double levenshteinDistance(String s0, String s1) {
+        s0 = s0.toLowerCase();
         this.s0 = s0;
+        s1 = s1.toLowerCase();
         this.s1 = s1;
         int len0 = s0.length() + 1;
         int len1 = s1.length() + 1;

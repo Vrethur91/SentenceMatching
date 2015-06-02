@@ -1,12 +1,13 @@
 package org.nlp.match.Main;
 
+import org.nlp.match.General.MatchOption;
 import org.nlp.match.Levenshtein.*;
 import org.nlp.match.SentenceMapper.*;
 import org.nlp.match.Sentenizer.*;
 import org.nlp.match.TokenMapper.LevenshteinTokenMapper;
 import org.nlp.match.TokenFilter.*;
-import org.nlp.match.Utility.DataHolder;
-import org.nlp.match.Utility.OutputWriter;
+import org.nlp.match.General.DataHolder;
+import org.nlp.match.Tools.OutputWriter;
 
 public class Main {
 

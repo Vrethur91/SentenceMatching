@@ -1,17 +1,21 @@
-package org.nlp.match.SentenceMapper;
+package org.nlp.match.SentenceMapper.DivideAndConquer;
 
+import org.nlp.match.Tools.OutputWriter;
+import org.nlp.match.General.DataHolder;
+import org.nlp.match.SentenceMapper.Utility.Allocation;
 import java.util.ArrayList;
 import java.util.Map.Entry;
 import java.util.TreeMap;
 import org.apache.commons.math3.stat.regression.SimpleRegression;
+import org.nlp.match.SentenceMapper.SentenceMapperInterface;
+import org.nlp.match.SentenceMapper.SimpleSentenceMapper;
 import org.structures.Tree.*;
-import org.nlp.match.Utility.*;
 
 /**
  *
  * @author Bene
  */
-public class DCSentenceMapper {
+public class DivideAndConquerSentenceMapper {
 
     private final int maxDepth = 4;
     private int split;

@@ -9,9 +9,9 @@ import java.util.Set;
 import java.util.TreeMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import org.nlp.match.Sentenizer.Sentence;
-import org.nlp.match.Sentenizer.Token;
-import org.nlp.match.Utility.ConfigLoader;
+import org.nlp.match.Sentenizer.Utility.Sentence;
+import org.nlp.match.Sentenizer.Utility.Token;
+import org.nlp.match.Tools.ConfigLoader;
 
 /**
  * Implements TokenFilterInterface

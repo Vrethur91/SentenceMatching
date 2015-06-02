@@ -1,14 +1,16 @@
 package org.nlp.match.SentenceMapper;
 
+import org.nlp.match.SentenceMapper.Utility.AssociationMap;
+import org.nlp.match.SentenceMapper.Utility.Allocation;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.TreeMap;
 import org.apache.commons.math3.stat.regression.SimpleRegression;
-import org.nlp.match.TokenMapper.TokenPair;
-import org.nlp.match.Sentenizer.Sentence;
-import org.nlp.match.Utility.DataHolder;
+import org.nlp.match.TokenMapper.Utility.TokenPair;
+import org.nlp.match.Sentenizer.Utility.Sentence;
+import org.nlp.match.General.DataHolder;
 
 /**
  *

@@ -1,7 +1,8 @@
 package org.nlp.match.SentenceMapper;
 
+import org.nlp.match.General.DataHolder;
+import org.nlp.match.SentenceMapper.Utility.Allocation;
 import java.util.TreeMap;
-import org.nlp.match.Utility.*;
 
 /**
  *

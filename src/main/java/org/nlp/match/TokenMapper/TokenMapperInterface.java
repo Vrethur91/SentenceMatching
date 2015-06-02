@@ -1,7 +1,8 @@
 package org.nlp.match.TokenMapper;
 
+import org.nlp.match.TokenMapper.Utility.TokenPair;
 import java.util.ArrayList;
-import org.nlp.match.Sentenizer.Token;
+import org.nlp.match.Sentenizer.Utility.Token;
 
 /**
  *

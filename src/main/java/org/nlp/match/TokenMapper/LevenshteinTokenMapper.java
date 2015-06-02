@@ -1,6 +1,7 @@
 package org.nlp.match.TokenMapper;
 
-import org.nlp.match.Sentenizer.Token;
+import org.nlp.match.TokenMapper.Utility.TokenPair;
+import org.nlp.match.Sentenizer.Utility.Token;
 import java.util.ArrayList;
 import java.util.HashMap;
 import org.nlp.match.Levenshtein.*;
