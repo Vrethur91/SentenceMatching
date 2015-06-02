@@ -154,7 +154,7 @@ public class DCSentenceMapper {
                 subSentenceMap = ((DataWindow) subNode.getNodeObject()).getWindowSentenceMap();
                 ((DataWindow) subNode.getNodeObject()).setWindowSentenceMap(subSentenceMap);
             }
-            OutputWriter.writePlotInTemplateXLS(subSentenceMap, "dcmapper/" + subNode.getIdentifier(), "plot_template");
+            OutputWriter.writeInPlotTemplateXLS(subSentenceMap, "dcmapper/" + subNode.getIdentifier());
             subSentenceMapList.add(subSentenceMap);
 
             if (((DataWindow) subNode.getNodeObject()).getDepth() == 1) {

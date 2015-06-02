@@ -4,6 +4,7 @@ import org.nlp.match.Levenshtein.*;
 import org.nlp.match.SentenceMapper.*;
 import org.nlp.match.Sentenizer.*;
 import org.nlp.match.TokenMapper.LevenshteinTokenMapper;
+import org.nlp.match.TokenFilter.*;
 import org.nlp.match.Utility.DataHolder;
 import org.nlp.match.Utility.OutputWriter;
 
@@ -11,7 +12,7 @@ public class Main {
 
     public static void main(String[] args) throws Exception {
         //option();
-        runStandardMatch();
+        //runStandardMatch();
         //runBibleMatch();
         //test();
         
@@ -27,7 +28,7 @@ public class Main {
                 ".//docs//apollo_eng.txt", "eng",
                 new GreekSentenizer(), new LatinSentenizer());
 
-        option.defineToken(holder, "All", "eng", 0.0, 0.0);
+        option.defineToken(holder, new UpperCaseFilter(), new StanfordNERFilter(), 0.0, 0.0);
 
         option.mapToken(holder,
                 new LevenshteinTokenMapper(
@@ -59,7 +60,7 @@ public class Main {
                 "C:\\Users\\Bene\\Documents\\NetBeansProjects\\EntityTagger\\docs\\bibeln\\eng-bbe.pbt", "eng",
                 new BibleSentenizer(), null);
 
-        option.defineToken(holder, "All", "eng", 0.1, 0.1);
+        option.defineToken(holder, new UpperCaseFilter(), new StanfordNERFilter(), 0.1, 0.1);
 
         option.mapToken(holder,
                 new LevenshteinTokenMapper(
@@ -85,7 +86,7 @@ public class Main {
                 "./docs/apollo_eng.txt", "eng",
                 new GreekSentenizer(), new LatinSentenizer());
 
-        option.defineToken(holder, "All", "eng", 0.0, 0.0);
+        option.defineToken(holder, new UpperCaseFilter(), new StanfordNERFilter(), 0.0, 0.0);
 
         option.mapToken(holder,
                 new LevenshteinTokenMapper(
@@ -116,7 +117,7 @@ public class Main {
                 ".//docs//apollo_eng.txt", "eng",
                 new SlidingWindows(), null);
 
-        option.defineToken(holder, "All", "eng", 0.0, 0.0);
+        option.defineToken(holder, new UpperCaseFilter(), new StanfordNERFilter(), 0.0, 0.0);
 
         option.mapToken(holder,
                 new LevenshteinTokenMapper(

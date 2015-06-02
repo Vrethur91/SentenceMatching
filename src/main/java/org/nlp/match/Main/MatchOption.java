@@ -73,23 +73,15 @@ public class MatchOption {
      *      0.1, 0.1);
      * 
      * @param holder DataHolder instance to store and get informations needed to proceed  
-     * @param opt1 search mode for the first text
-     * @param opt2 search mode for the second text
+     * @param filter1 TokenFilter instance for the first text
+     * @param filter2 TokenFilter instance for the second text
      * @param diff1 decimal value (between 0.0 and 1.0) for the top occurrence filter. 
      * @param diff2 decimal value (between 0.0 and 1.0) for the top occurrence filter. 
      */
-    public void defineToken(DataHolder holder, String opt1, String opt2, double diff1, double diff2){
+    public void defineToken(DataHolder holder, TokenFilterInterface filter1, TokenFilterInterface filter2, double diff1, double diff2){
         System.out.println("> Define Token ");
-        TokenFilter filter = new TokenFilter();
-        ArrayList<Token> tokenList1 = null;
-        ArrayList<Token> tokenList2 = null;
         
-        switch(opt1){
-            case "eng": tokenList1 = filter.filterToken(holder.getSentenceList1());
-                        break;
-            case "All": tokenList1 = filter.filterToken(holder.getSentenceList1(), "All");
-                        break;
-        }
+        ArrayList<Token> tokenList1 = filter1.filterToken(holder.getSentenceList1());
         
         if(diff1>0.0&&tokenList1!=null){
             tokenList1 = Tweaker.removeTopOccurences(tokenList1, diff1);
@@ -97,12 +89,7 @@ public class MatchOption {
         
         System.out.println(tokenList1.size()+" Token for \""+ holder.getLanguage1() +"\" created");
         
-        switch(opt2){
-            case "eng": tokenList2 = filter.filterToken(holder.getSentenceList2());
-                        break;
-            case "All": tokenList2 = filter.filterToken(holder.getSentenceList2(), "All");
-                        break;
-        }
+        ArrayList<Token> tokenList2 = filter2.filterToken(holder.getSentenceList2());
         
         if(diff2>0.0&&tokenList2!=null){
             tokenList2 = Tweaker.removeTopOccurences(tokenList2, diff2);
